@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeFi 파타야 여행안내문</title>
-<style>body{margin:0}</style>
+<title>WeFi 인천 제주항공 여행안내문</title>
+<style>body{margin:0;overflow-x:hidden}</style>
 </head>
 <body>
-<!-- WeFi Beyond Banking Summit 2026 · 파타야·방콕 여행안내문 V1 (Eoding용 · JS 없음 · wf- 프리픽스) -->
+<!-- WeFi Beyond Banking Summit 2026 · 파타야·방콕 여행안내문 V5 (Eoding용 · JS 없음 · wf- 프리픽스) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 .wf-root{--navy:#27398C;--navy-d:#1A2766;--ink:#16181D;--sub:#5B6170;--line:#E4E6EB;--bg:#F5F6F8;--pt:#FF5B3A;--pt-bg:#FFF1ED;
@@ -117,6 +117,25 @@
 .wf-foot{background:var(--ink);color:rgba(255,255,255,.7);text-align:center;padding:32px 20px;font-size:13px;width:100vw;margin-left:calc(50% - 50vw)}
 .wf-foot b{display:block;color:#fff;font-size:16px;margin-bottom:6px}
 
+/* 입국 동선 */
+.wf-route{list-style:none;position:relative;margin-top:4px}
+.wf-route:before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.wf-route li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:14px;padding-bottom:12px}
+.wf-route li:last-child{padding-bottom:0}
+.wf-route .wf-n{position:relative;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.wf-route li.wf-goal .wf-n{background:var(--pt)}
+.wf-route .wf-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.wf-route .wf-fl{display:inline-block;font-size:12px;font-weight:700;color:var(--navy);background:#E9ECF7;border-radius:6px;padding:2px 8px;margin-bottom:6px}
+.wf-route li.wf-goal .wf-fl{color:var(--pt);background:var(--pt-bg)}
+.wf-route h4{font-size:16px;font-weight:800;line-height:1.4;margin-bottom:2px}
+.wf-route p{font-size:14px;color:var(--sub);line-height:1.55}
+.wf-route p b{color:var(--ink)}
+.wf-floors{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:20px}
+.wf-floors div{text-align:center}
+.wf-floors b{display:block;font-size:22px;font-weight:800;color:var(--navy);line-height:1.2}
+.wf-floors span{font-size:13px;color:var(--sub)}
+.wf-floors i{font-style:normal;font-size:13px;font-weight:700;color:var(--pt);white-space:nowrap}
+
 @media(max-width:560px){
   .wf-sec{padding:44px 0}
   .wf-h2{font-size:22px}
@@ -194,10 +213,31 @@
     </div>
   </section>
 
-  <!-- 일정 -->
+  <!-- 입국 동선 -->
   <section class="wf-sec">
     <div class="wf-wrap">
-      <p class="wf-eyebrow">02 여행 일정</p>
+      <p class="wf-eyebrow">02 방콕공항 도착 동선</p>
+      <h2 class="wf-h2">도착 후 버스 탑승까지</h2>
+      <div class="wf-floors">
+        <div><b>2층</b><span>입국 · 수하물</span></div>
+        <i>에스컬레이터 ↓</i>
+        <div><b>1층</b><span>버스 탑승</span></div>
+      </div>
+      <ol class="wf-route">
+        <li><span class="wf-n">1</span><div class="wf-box"><span class="wf-fl">2층</span><h4>입국심사</h4><p><b>여권과 TDAC QR 코드</b>를 미리 준비해 주세요.</p></div></li>
+        <li><span class="wf-n">2</span><div class="wf-box"><span class="wf-fl">2층</span><h4>수하물 찾기 후 C게이트로 나가기</h4><p>수하물 수취 구역 안에서 <b>담당 인솔자</b>가 C게이트 출구를 안내합니다.</p></div></li>
+        <li><span class="wf-n">3</span><div class="wf-box"><span class="wf-fl">2층</span><h4>8번 출구 방향으로 이동</h4><p>C출구 앞에서 <b>현지 안내 직원과 한국인 직원</b>이 이동 방향을 안내합니다.</p></div></li>
+        <li><span class="wf-n">4</span><div class="wf-box"><span class="wf-fl">2층 → 1층</span><h4>에스컬레이터로 1층 이동</h4><p>8번 출구 부근에서 <b>미팅피켓을 든 안내 직원</b>을 따라 에스컬레이터를 탑승합니다.</p></div></li>
+        <li class="wf-goal"><span class="wf-n">5</span><div class="wf-box"><span class="wf-fl">1층</span><h4>7번 출구로 나가 버스 탑승</h4><p>현지 가이드 안내에 따라 횡단보도를 건너면 <b>한국인 가이드가 버스 앞에서 미팅피켓</b>을 들고 기다립니다. 인원 확인 후 버스가 출발합니다.</p></div></li>
+      </ol>
+      <p class="wf-note">* 수하물 수취 구역은 외부 직원이 들어갈 수 없으니, 일행과 떨어졌을 때는 <b>C게이트 밖으로 나와</b> 안내 직원을 찾아 주세요.</p>
+    </div>
+  </section>
+
+  <!-- 일정 -->
+  <section class="wf-sec wf-gray">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">03 여행 일정</p>
       <h2 class="wf-h2">일자별 상세 일정</h2>
 
       <nav class="wf-daynav">
@@ -214,7 +254,7 @@
         <ul class="wf-tl">
           <li class="wf-key"><span class="wf-t">17:00</span><span class="wf-e">인천공항 제1터미널 3층 출국장 L 게이트 앞 집결<small>집결 후 출국 수속</small></span></li>
           <li><span class="wf-t">20:05</span><span class="wf-e">방콕으로 출발 (7C2503)<small>약 5시간 55분 비행 · 석식 기내식</small></span></li>
-          <li><span class="wf-t">00:10</span><span class="wf-e">방콕 도착, 가이드 미팅<small>전용버스로 파타야 이동 (약 1시간 20분)</small></span></li>
+          <li><span class="wf-t">00:10</span><span class="wf-e">방콕 도착, 가이드 미팅<small>공항 도착 동선은 02 안내 참고 · 전용버스로 파타야 이동 (약 1시간 20분)</small></span></li>
           <li><span class="wf-t">01:30</span><span class="wf-e">호텔 체크인 및 휴식</span></li>
         </ul>
         <div class="wf-day-ft">
@@ -297,9 +337,9 @@
   </section>
 
   <!-- 호텔 -->
-  <section class="wf-sec wf-gray">
+  <section class="wf-sec">
     <div class="wf-wrap">
-      <p class="wf-eyebrow">03 숙소 안내</p>
+      <p class="wf-eyebrow">04 숙소 안내</p>
       <h2 class="wf-h2">행사장까지 걸어서 5분</h2>
       <div class="wf-hotel">
         <h3>로얄 크리프 호텔 비치동</h3>
@@ -315,9 +355,9 @@
   </section>
 
   <!-- 준비물 -->
-  <section class="wf-sec">
+  <section class="wf-sec wf-gray">
     <div class="wf-wrap">
-      <p class="wf-eyebrow">04 출발 전 준비</p>
+      <p class="wf-eyebrow">05 출발 전 준비</p>
       <h2 class="wf-h2">꼭 챙겨 주세요</h2>
       <ul class="wf-check">
         <li>여권 (출국일 기준 유효기간 6개월 이상)<small>여권 사본 또는 사진도 휴대폰에 저장해 두시면 좋습니다.</small></li>
@@ -347,9 +387,9 @@
   </section>
 
   <!-- 연락처 -->
-  <section class="wf-sec wf-gray">
+  <section class="wf-sec">
     <div class="wf-wrap">
-      <p class="wf-eyebrow">05 비상 연락처</p>
+      <p class="wf-eyebrow">06 비상 연락처</p>
       <h2 class="wf-h2">도움이 필요하시면 연락 주세요</h2>
       <div class="wf-contact">
         <div><span>월드마스터투어 · 고승범 대표</span><b>010-3470-5665</b></div>
