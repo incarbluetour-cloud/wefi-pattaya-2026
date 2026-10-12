@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeFi 인천 대한항공 KE 655-656 여행안내문</title>
+<style>body{margin:0;overflow-x:hidden}</style>
+</head>
+<body>
+<!-- WeFi Beyond Banking Summit 2026 · 파타야·방콕 여행안내문 인천 대한항공 KE655-656 V1 (Eoding용 · JS 없음 · wf- 프리픽스) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+.wf-root{--navy:#27398C;--navy-d:#1A2766;--ink:#16181D;--sub:#5B6170;--line:#E4E6EB;--bg:#F5F6F8;--pt:#FF5B3A;--pt-bg:#FFF1ED;
+  position:relative;overflow:hidden;font-family:'Pretendard',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  color:var(--ink);background:#fff;line-height:1.6;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.wf-root *{box-sizing:border-box;margin:0;padding:0}
+.wf-wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.wf-sec{width:100vw;margin-left:calc(50% - 50vw);padding:56px 0}
+.wf-sec.wf-gray{background:var(--bg)}
+.wf-eyebrow{font-size:13px;font-weight:700;color:var(--pt);letter-spacing:.02em;margin-bottom:8px}
+.wf-h2{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.3;margin-bottom:24px}
+
+/* 표지 */
+.wf-hero{background:var(--navy);color:#fff;padding:64px 0 48px}
+.wf-hero-tag{display:inline-block;font-size:13px;font-weight:600;padding:5px 12px;border:1px solid rgba(255,255,255,.4);border-radius:99px;margin-bottom:20px}
+.wf-hero h1{font-size:38px;font-weight:800;line-height:1.18;letter-spacing:-.03em;margin-bottom:14px}
+.wf-hero-sub{font-size:20px;font-weight:600;opacity:.92;margin-bottom:32px}
+.wf-hero-meta{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}
+.wf-hero-meta div{padding:16px 0 0}
+.wf-hero-meta div+div{padding-left:16px;border-left:1px solid rgba(255,255,255,.25)}
+.wf-hero-meta dt{font-size:12px;opacity:.7;margin-bottom:4px}
+.wf-hero-meta dd{font-size:16px;font-weight:700;line-height:1.35}
+
+/* 집결 안내 */
+.wf-meet{margin-top:-1px;background:var(--pt);color:#fff;padding:22px 0}
+.wf-meet .wf-wrap{display:flex;gap:16px;align-items:center}
+.wf-meet-time{flex:none;font-size:30px;font-weight:800;line-height:1;padding-right:16px;border-right:1px solid rgba(255,255,255,.45)}
+.wf-meet-time small{display:block;font-size:13px;font-weight:600;margin-bottom:6px;opacity:.9}
+.wf-meet p{font-size:16px;font-weight:600;line-height:1.45}
+.wf-meet p b{font-weight:800}
+
+/* 항공 */
+.wf-flight{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;margin-bottom:12px}
+.wf-flight-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:14px;color:var(--sub)}
+.wf-flight-top b{color:var(--navy);font-size:15px;font-weight:800}
+.wf-flight-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+.wf-flight-row .wf-pt{font-size:13px;color:var(--sub)}
+.wf-flight-row .wf-tm{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.wf-flight-row .wf-dt{font-size:13px;color:var(--sub)}
+.wf-flight-row .wf-arr{text-align:right}
+.wf-dur{text-align:center;font-size:12px;color:var(--sub);min-width:96px}
+.wf-dur i{display:block;height:2px;background:var(--line);margin:6px 0;position:relative}
+.wf-dur i:after{content:"";position:absolute;right:-1px;top:-4px;border-left:8px solid var(--line);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.wf-note{font-size:14px;color:var(--sub);margin-top:10px}
+.wf-note b{color:var(--pt)}
+
+/* 일정 */
+.wf-daynav{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:28px}
+.wf-daynav a{display:block;text-align:center;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 4px}
+.wf-daynav a b{display:block;font-size:15px;font-weight:800;color:var(--navy)}
+.wf-daynav a span{font-size:12px;color:var(--sub)}
+.wf-day{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:16px;scroll-margin-top:16px}
+.wf-day-hd{display:flex;align-items:baseline;gap:12px;padding:20px 22px 16px;border-bottom:1px solid var(--line)}
+.wf-day-no{font-size:14px;font-weight:800;color:#fff;background:var(--navy);border-radius:8px;padding:3px 10px}
+.wf-day-ttl{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.wf-day-date{margin-left:auto;font-size:14px;color:var(--sub);flex:none}
+.wf-tl{list-style:none;padding:8px 22px 6px}
+.wf-tl li{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.wf-tl li:last-child{border-bottom:0}
+.wf-tl .wf-t{font-size:15px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.wf-tl .wf-e{font-size:15.5px}
+.wf-tl .wf-e small{display:block;font-size:13.5px;color:var(--sub);margin-top:2px}
+.wf-tl .wf-key .wf-e{font-weight:700}
+.wf-split{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.wf-split div{background:var(--bg);border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.45}
+.wf-split b{display:block;font-size:12.5px;color:var(--pt);margin-bottom:2px}
+.wf-day-ft{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;background:var(--bg);padding:14px 22px;font-size:13.5px;color:var(--sub)}
+.wf-day-ft .wf-meal{display:flex;gap:6px;flex-wrap:wrap}
+.wf-day-ft .wf-meal span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--ink)}
+.wf-day-ft .wf-meal span em{font-style:normal;font-weight:700;color:var(--navy);margin-right:4px}
+.wf-day-ft .wf-stay{margin-left:auto}
+.wf-day-ft .wf-stay b{color:var(--ink)}
+
+/* 호텔 */
+.wf-hotel{background:var(--navy-d);color:#fff;border-radius:20px;padding:28px 24px}
+.wf-hotel h3{font-size:24px;font-weight:800;line-height:1.3;margin-bottom:4px}
+.wf-hotel-en{font-size:14px;opacity:.7;margin-bottom:22px}
+.wf-hotel dl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.2)}
+.wf-hotel dl div{padding:14px 0 0}
+.wf-hotel dl div+div{padding-left:14px;border-left:1px solid rgba(255,255,255,.2)}
+.wf-hotel dt{font-size:12px;opacity:.65;margin-bottom:3px}
+.wf-hotel dd{font-size:15px;font-weight:700;line-height:1.4}
+.wf-hotel p{font-size:14px;opacity:.85;margin-top:20px;line-height:1.6}
+
+/* 준비물·유의사항 */
+.wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wf-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.wf-card h4{font-size:16px;font-weight:800;margin-bottom:6px}
+.wf-card p{font-size:14.5px;color:var(--sub);line-height:1.55}
+.wf-card p b{color:var(--ink)}
+.wf-check{list-style:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 18px}
+.wf-check li{position:relative;padding:12px 0 12px 28px;font-size:15px;border-bottom:1px solid var(--line)}
+.wf-check li:last-child{border-bottom:0}
+.wf-check li:before{content:"";position:absolute;left:2px;top:17px;width:14px;height:8px;border-left:2.5px solid var(--pt);border-bottom:2.5px solid var(--pt);transform:rotate(-45deg)}
+.wf-check li small{display:block;font-size:13.5px;color:var(--sub);margin-top:2px}
+.wf-warn{background:var(--pt-bg);border-radius:14px;padding:18px 20px;margin-top:12px}
+.wf-warn h4{font-size:16px;font-weight:800;color:var(--pt);margin-bottom:8px}
+.wf-warn ul{list-style:none}
+.wf-warn li{font-size:14.5px;padding:4px 0 4px 14px;position:relative}
+.wf-warn li:before{content:"*";position:absolute;left:0;color:var(--pt);font-weight:800}
+
+/* 연락처 */
+.wf-contact{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wf-contact div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.wf-contact span{font-size:13px;color:var(--sub)}
+.wf-contact b{display:block;font-size:20px;font-weight:800;color:var(--navy);margin-top:4px}
+.wf-foot{background:var(--ink);color:rgba(255,255,255,.7);text-align:center;padding:32px 20px;font-size:13px;width:100vw;margin-left:calc(50% - 50vw)}
+.wf-foot b{display:block;color:#fff;font-size:16px;margin-bottom:6px}
+
+/* 입국 동선 */
+.wf-route{list-style:none;position:relative;margin-top:4px}
+.wf-route:before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.wf-route li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:14px;padding-bottom:12px}
+.wf-route li:last-child{padding-bottom:0}
+.wf-route .wf-n{position:relative;z-index:1;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.wf-route li.wf-goal .wf-n{background:var(--pt)}
+.wf-route .wf-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.wf-route .wf-fl{display:inline-block;font-size:12px;font-weight:700;color:var(--navy);background:#E9ECF7;border-radius:6px;padding:2px 8px;margin-bottom:6px}
+.wf-route li.wf-goal .wf-fl{color:var(--pt);background:var(--pt-bg)}
+.wf-route h4{font-size:16px;font-weight:800;line-height:1.4;margin-bottom:2px}
+.wf-route p{font-size:14px;color:var(--sub);line-height:1.55}
+.wf-route p b{color:var(--ink)}
+.wf-floors{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:20px}
+.wf-floors div{text-align:center}
+.wf-floors b{display:block;font-size:22px;font-weight:800;color:var(--navy);line-height:1.2}
+.wf-floors span{font-size:13px;color:var(--sub)}
+.wf-floors i{font-style:normal;font-size:13px;font-weight:700;color:var(--pt);white-space:nowrap}
+
+@media(max-width:560px){
+  .wf-sec{padding:44px 0}
+  .wf-h2{font-size:22px}
+  .wf-hero{padding:48px 0 36px}
+  .wf-hero h1{font-size:30px}
+  .wf-hero-sub{font-size:17px}
+  .wf-hero-meta dd{font-size:14px}
+  .wf-meet-time{font-size:24px}
+  .wf-meet p{font-size:14.5px}
+  .wf-flight-row .wf-tm{font-size:23px}
+  .wf-dur{min-width:72px}
+  .wf-day-hd{flex-wrap:wrap;gap:8px 10px}
+  .wf-day-date{margin-left:0;width:100%}
+  .wf-tl{padding:6px 18px}
+  .wf-tl li{grid-template-columns:50px 1fr}
+  .wf-split{grid-template-columns:1fr}
+  .wf-day-ft .wf-stay{margin-left:0;width:100%}
+  .wf-contact{grid-template-columns:1fr}
+  .wf-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .wf-card{padding:14px}
+  .wf-card p{font-size:13.5px}
+  .wf-hotel dl{grid-template-columns:1fr;}
+  .wf-hotel dl div+div{padding-left:0;border-left:0}
+}
+</style>
+
+<div class="wf-root">
+
+  <!-- 표지 -->
+  <section class="wf-sec wf-hero">
+    <div class="wf-wrap">
+      <span class="wf-hero-tag">WeFi Beyond Banking Summit 2026</span>
+      <h1>인천 대한항공<br>KE 655-656 여행안내문</h1>
+      <p class="wf-hero-sub">태국 파타야 · 방콕 3박 5일</p>
+      <dl class="wf-hero-meta">
+        <div><dt>여행 기간</dt><dd>10.16(금) ~<br>10.20(화)</dd></div>
+        <div><dt>항공</dt><dd>대한항공<br>직항</dd></div>
+        <div><dt>숙소</dt><dd>로얄 크리프<br>호텔 3박</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 집결 -->
+  <section class="wf-sec wf-meet" style="padding:22px 0">
+    <div class="wf-wrap">
+      <div class="wf-meet-time"><small>10월 16일(금)</small>18:20</div>
+      <p><b>인천공항 제2터미널 3층 출국장<br>B 게이트 앞</b> 집결</p>
+    </div>
+  </section>
+
+  <!-- 항공 -->
+  <section class="wf-sec wf-gray">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">01 항공 일정</p>
+      <h2 class="wf-h2">대한항공 왕복 직항</h2>
+
+      <div class="wf-flight">
+        <div class="wf-flight-top"><b>KE655</b><span>가는 편 · 10월 16일(금)</span></div>
+        <div class="wf-flight-row">
+          <div><p class="wf-pt">인천</p><p class="wf-tm">21:15</p><p class="wf-dt">10.16(금)</p></div>
+          <div class="wf-dur">약 5시간 40분<i></i>직항</div>
+          <div class="wf-arr"><p class="wf-pt">방콕</p><p class="wf-tm">01:05</p><p class="wf-dt">10.17(토)</p></div>
+        </div>
+      </div>
+
+      <div class="wf-flight">
+        <div class="wf-flight-top"><b>KE656</b><span>오는 편 · 10월 20일(화)</span></div>
+        <div class="wf-flight-row">
+          <div><p class="wf-pt">방콕</p><p class="wf-tm">02:35</p><p class="wf-dt">10.20(화)</p></div>
+          <div class="wf-dur">약 5시간 40분<i></i>직항</div>
+          <div class="wf-arr"><p class="wf-pt">인천</p><p class="wf-tm">10:15</p><p class="wf-dt">10.20(화)</p></div>
+        </div>
+      </div>
+      <p class="wf-note">* 시간은 모두 현지 시각 기준이며, 태국은 한국보다 <b>2시간 느립니다.</b><br>* 귀국편은 4일차(19일) 밤 일정을 마친 뒤 자정을 넘겨 출발하는 새벽 항공편입니다.</p>
+    </div>
+  </section>
+
+  <!-- 입국 동선 -->
+  <section class="wf-sec">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">02 방콕공항 도착 동선</p>
+      <h2 class="wf-h2">도착 후 버스 탑승까지</h2>
+      <div class="wf-floors">
+        <div><b>2층</b><span>입국 · 수하물</span></div>
+        <i>에스컬레이터 ↓</i>
+        <div><b>1층</b><span>버스 탑승</span></div>
+      </div>
+      <ol class="wf-route">
+        <li><span class="wf-n">1</span><div class="wf-box"><span class="wf-fl">2층</span><h4>입국심사</h4><p><b>여권과 TDAC QR 코드</b>를 미리 준비해 주세요.</p></div></li>
+        <li><span class="wf-n">2</span><div class="wf-box"><span class="wf-fl">2층</span><h4>수하물 찾기 후 C게이트로 나가기</h4><p>수하물 수취 구역 안에서 <b>담당 인솔자</b>가 C게이트 출구를 안내합니다.</p></div></li>
+        <li><span class="wf-n">3</span><div class="wf-box"><span class="wf-fl">2층</span><h4>8번 출구 방향으로 이동</h4><p>C출구 앞에서 <b>현지 안내 직원과 한국인 직원</b>이 이동 방향을 안내합니다.</p></div></li>
+        <li><span class="wf-n">4</span><div class="wf-box"><span class="wf-fl">2층 → 1층</span><h4>에스컬레이터로 1층 이동</h4><p>8번 출구 부근에서 <b>미팅피켓을 든 안내 직원</b>을 따라 에스컬레이터를 탑승합니다.</p></div></li>
+        <li class="wf-goal"><span class="wf-n">5</span><div class="wf-box"><span class="wf-fl">1층</span><h4>7번 출구로 나가 버스 탑승</h4><p>현지 가이드 안내에 따라 횡단보도를 건너면 <b>한국인 가이드가 버스 앞에서 미팅피켓</b>을 들고 기다립니다. 인원 확인 후 버스가 출발합니다.</p></div></li>
+      </ol>
+      <p class="wf-note">* 수하물 수취 구역은 외부 직원이 들어갈 수 없으니, 일행과 떨어졌을 때는 <b>C게이트 밖으로 나와</b> 안내 직원을 찾아 주세요.</p>
+    </div>
+  </section>
+
+  <!-- 일정 -->
+  <section class="wf-sec wf-gray">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">03 여행 일정</p>
+      <h2 class="wf-h2">일자별 상세 일정</h2>
+
+      <nav class="wf-daynav">
+        <a href="#wf-d1"><b>1일차</b><span>10.16 금</span></a>
+        <a href="#wf-d2"><b>2일차</b><span>10.17 토</span></a>
+        <a href="#wf-d3"><b>3일차</b><span>10.18 일</span></a>
+        <a href="#wf-d4"><b>4일차</b><span>10.19 월</span></a>
+        <a href="#wf-d5"><b>5일차</b><span>10.20 화</span></a>
+      </nav>
+
+      <!-- 1일차 -->
+      <article class="wf-day" id="wf-d1">
+        <div class="wf-day-hd"><span class="wf-day-no">1일차</span><h3 class="wf-day-ttl">인천 출발, 파타야 도착</h3><span class="wf-day-date">10월 16일(금)</span></div>
+        <ul class="wf-tl">
+          <li class="wf-key"><span class="wf-t">18:20</span><span class="wf-e">인천공항 제2터미널 3층 출국장 B 게이트 앞 집결<small>집결 후 출국 수속</small></span></li>
+          <li><span class="wf-t">21:15</span><span class="wf-e">방콕으로 출발 (KE655)<small>약 5시간 40분 비행 · 석식 기내식</small></span></li>
+          <li><span class="wf-t">01:05</span><span class="wf-e">방콕 도착, 가이드 미팅<small>공항 도착 동선은 02 안내 참고 · 전용버스로 파타야 이동 (약 1시간 20분)</small></span></li>
+          <li><span class="wf-t">02:30</span><span class="wf-e">호텔 체크인 및 휴식</span></li>
+        </ul>
+        <div class="wf-day-ft">
+          <div class="wf-meal"><span><em>석</em>기내식</span></div>
+          <div class="wf-stay">숙소 <b>로얄 크리프 호텔 비치동</b></div>
+        </div>
+      </article>
+
+      <!-- 2일차 -->
+      <article class="wf-day" id="wf-d2">
+        <div class="wf-day-hd"><span class="wf-day-no">2일차</span><h3 class="wf-day-ttl">WeFi Beyond Banking Summit 2026</h3><span class="wf-day-date">10월 17일(토)</span></div>
+        <ul class="wf-tl">
+          <li><span class="wf-t">07:00</span><span class="wf-e">기상 후 호텔 조식</span></li>
+          <li><span class="wf-t">08:30</span><span class="wf-e">행사장으로 도보 이동 (약 5분)</span></li>
+          <li class="wf-key"><span class="wf-t">09:00</span><span class="wf-e">공식 일정 · WeFi Beyond Banking Summit 2026<small>장소 : Pattaya Exhibition and Convention Hall · 중식 회의장 제공</small></span></li>
+          <li><span class="wf-t">16:30</span><span class="wf-e">행사 종료 후 호텔로 복귀</span></li>
+          <li class="wf-key"><span class="wf-t">18:00</span><span class="wf-e">직급별 석식 (전용버스 이동)
+            <div class="wf-split">
+              <div><b>실버 직급 이상</b>본사 갈라 디너 참석</div>
+              <div><b>브론즈</b>외부 한정식 석식 (무제한 삼겹살)</div>
+            </div></span></li>
+          <li><span class="wf-t">20:00</span><span class="wf-e">호텔 투숙 후 휴식</span></li>
+        </ul>
+        <div class="wf-day-ft">
+          <div class="wf-meal"><span><em>조</em>호텔식</span><span><em>중</em>회의장</span><span><em>석</em>갈라디너·한정식</span></div>
+          <div class="wf-stay">숙소 <b>상동</b></div>
+        </div>
+      </article>
+
+      <!-- 3일차 -->
+      <article class="wf-day" id="wf-d3">
+        <div class="wf-day-hd"><span class="wf-day-no">3일차</span><h3 class="wf-day-ttl">산호섬 호핑투어</h3><span class="wf-day-date">10월 18일(일)</span></div>
+        <ul class="wf-tl">
+          <li><span class="wf-t">08:00</span><span class="wf-e">기상 후 호텔 조식</span></li>
+          <li class="wf-key"><span class="wf-t">09:00</span><span class="wf-e">산호섬(꼬란) 호핑투어<small>해양스포츠 선택관광 : 바나나보트, 제트스키</small></span></li>
+          <li><span class="wf-t">12:00</span><span class="wf-e">현지식 중식</span></li>
+          <li><span class="wf-t">13:00</span><span class="wf-e">농눅빌리지 파크 관광<small>태국 전통 맛사지 (90분)</small></span></li>
+          <li><span class="wf-t">18:00</span><span class="wf-e">현지식 석식</span></li>
+          <li><span class="wf-t">19:00</span><span class="wf-e">호텔로 귀환 후 자유시간</span></li>
+        </ul>
+        <div class="wf-day-ft">
+          <div class="wf-meal"><span><em>조</em>호텔식</span><span><em>중</em>현지식</span><span><em>석</em>현지식</span></div>
+          <div class="wf-stay">숙소 <b>상동</b></div>
+        </div>
+      </article>
+
+      <!-- 4일차 -->
+      <article class="wf-day" id="wf-d4">
+        <div class="wf-day-hd"><span class="wf-day-no">4일차</span><h3 class="wf-day-ttl">파타야 관광 후 방콕으로</h3><span class="wf-day-date">10월 19일(월)</span></div>
+        <ul class="wf-tl">
+          <li><span class="wf-t">08:00</span><span class="wf-e">기상 후 호텔 조식 · 체크아웃</span></li>
+          <li><span class="wf-t">09:00</span><span class="wf-e">황금절벽사원, 악어농장, 나수팜 과일농장</span></li>
+          <li><span class="wf-t">13:00</span><span class="wf-e">한정식 중식<small>망고 비빔밥, 불고기 등</small></span></li>
+          <li><span class="wf-t">14:00</span><span class="wf-e">방콕으로 이동</span></li>
+          <li class="wf-key"><span class="wf-t">16:00</span><span class="wf-e">아시아티크 강변 노을과 야시장</span></li>
+          <li><span class="wf-t">19:00</span><span class="wf-e">씨푸드 석식</span></li>
+          <li><span class="wf-t">20:00</span><span class="wf-e">공항으로 이동 후 출국 수속</span></li>
+          <li><span class="wf-t">02:35</span><span class="wf-e">인천공항으로 출발 (KE656)<small>약 5시간 40분 비행 · 기내 1박</small></span></li>
+        </ul>
+        <div class="wf-day-ft">
+          <div class="wf-meal"><span><em>조</em>호텔식</span><span><em>중</em>한정식</span><span><em>석</em>씨푸드</span></div>
+          <div class="wf-stay">숙소 <b>기내 1박</b></div>
+        </div>
+      </article>
+
+      <!-- 5일차 -->
+      <article class="wf-day" id="wf-d5">
+        <div class="wf-day-hd"><span class="wf-day-no">5일차</span><h3 class="wf-day-ttl">인천 도착</h3><span class="wf-day-date">10월 20일(화)</span></div>
+        <ul class="wf-tl">
+          <li><span class="wf-t">10:15</span><span class="wf-e">인천공항 도착</span></li>
+          <li><span class="wf-t">11:00</span><span class="wf-e">입국 수속 후 해산</span></li>
+        </ul>
+        <div class="wf-day-ft">
+          <div class="wf-meal"><span><em>조</em>기내식</span></div>
+        </div>
+      </article>
+
+      <p class="wf-note">* 상기 일정은 현지 상황에 따라 변동될 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 호텔 -->
+  <section class="wf-sec">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">04 숙소 안내</p>
+      <h2 class="wf-h2">행사장까지 걸어서 5분</h2>
+      <div class="wf-hotel">
+        <h3>로얄 크리프 호텔 비치동</h3>
+        <p class="wf-hotel-en">Royal Cliff Beach Hotel · Pattaya</p>
+        <dl>
+          <div><dt>객실</dt><dd>미니스위트 플러스<br>씨뷰룸</dd></div>
+          <div><dt>숙박</dt><dd>3박<br>10.16 ~ 10.19</dd></div>
+          <div><dt>행사장</dt><dd>도보 약 5분</dd></div>
+        </dl>
+        <p>1일차는 자정을 넘겨 새벽 2시 30분경 체크인합니다. 4일차 아침 체크아웃 시 객실 내 소지품을 꼭 확인해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 준비물 -->
+  <section class="wf-sec wf-gray">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">05 출발 전 준비</p>
+      <h2 class="wf-h2">꼭 챙겨 주세요</h2>
+      <ul class="wf-check">
+        <li>여권 (출국일 기준 유효기간 6개월 이상)<small>여권 사본 또는 사진도 휴대폰에 저장해 두시면 좋습니다.</small></li>
+        <li>태국 디지털 입국카드(TDAC) 사전 작성<small>도착 72시간 전부터 공식 사이트(tdac.immigration.go.th)에서 무료 작성 · 발급된 QR 코드를 캡처해 두세요.</small></li>
+        <li>여행자 보험 및 개인 상비약</li>
+        <li>호핑투어 준비물<small>수영복, 선크림, 선글라스, 아쿠아슈즈, 여벌 옷, 방수팩</small></li>
+        <li>우산 또는 우비<small>10월 중순은 우기 끝 무렵으로 갑작스러운 소나기(스콜)가 내릴 수 있습니다.</small></li>
+      </ul>
+
+      <div class="wf-grid" style="margin-top:12px">
+        <div class="wf-card"><h4>시차</h4><p>한국보다 <b>2시간 느립니다.</b><br>한국 12:00 → 태국 10:00</p></div>
+        <div class="wf-card"><h4>날씨</h4><p>낮 기온 <b>30℃ 안팎</b>의 무더운 날씨<br>실내 냉방 대비 얇은 겉옷 권장</p></div>
+        <div class="wf-card"><h4>전압</h4><p><b>220V</b>로 대부분 한국 플러그 사용 가능<br>멀티 어댑터 지참 권장</p></div>
+        <div class="wf-card"><h4>화폐</h4><p>태국 <b>바트(THB)</b><br>소액 현금과 해외결제 카드 준비</p></div>
+      </div>
+
+      <div class="wf-warn">
+        <h4>유의사항</h4>
+        <ul>
+          <li>태국은 <b>전자담배 반입·사용이 불법</b>입니다. 적발 시 벌금 또는 구금될 수 있으니 절대 가져가지 마세요.</li>
+          <li>보조배터리는 위탁 수하물로 보낼 수 없으며, 반드시 기내에 휴대해 주세요.</li>
+          <li>TDAC는 반드시 공식 사이트에서 작성하세요. 수수료를 요구하는 유사 사이트에 주의하세요.</li>
+          <li>해양스포츠는 선택관광으로, 건강 상태와 안전 수칙을 확인하신 후 참여해 주세요.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 연락처 -->
+  <section class="wf-sec">
+    <div class="wf-wrap">
+      <p class="wf-eyebrow">06 비상 연락처</p>
+      <h2 class="wf-h2">도움이 필요하시면 연락 주세요</h2>
+      <div class="wf-contact">
+        <div><span>월드마스터투어 · 고승범 대표</span><b>010-3470-5665</b></div>
+        <div><span>현지 인솔자</span><b>추후 안내</b></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
